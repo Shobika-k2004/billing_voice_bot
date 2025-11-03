@@ -1,0 +1,164 @@
+[
+    [
+        {
+            "sender": "user",
+            "text": "What is the revenue?"
+        },
+        {
+            "sender": "bot",
+            "text": "The total revenue is 100 lakhs."
+        }
+    ],
+    [
+        {
+            "sender": "user",
+            "text": "What is the revenue?"
+        },
+        {
+            "sender": "bot",
+            "text": "The total revenue is 100 lakhs."
+        }
+    ],
+    [
+        {
+            "sender": "user",
+            "text": "revenue of cities"
+        },
+        {
+            "sender": "bot",
+            "text": "Hello! \ud83d\udc4b In the data you provided, revenue is recorded for the following cities:\n\n- Surat  \n- Vadodara  \n- Ghaziabad  \n\nJust let me know which city\u2019s revenue details you\u2019d like to explore, and I\u2019ll share the information. Is there anything else I can help you with?\n\n<table border=\"1\" style=\"border-collapse: collapse; margin-top: 10px;\"><tr><th style=\"padding: 5px;\">Cities</th><th style=\"padding: 5px;\">Revenue(In_Lakhs)</th></tr><tr><td style=\"padding: 5px;\">Patna</td><td style=\"padding: 5px;\">772.96 lakhs</td></tr><tr><td style=\"padding: 5px;\">Bengaluru</td><td style=\"padding: 5px;\">742.32 lakhs</td></tr><tr><td style=\"padding: 5px;\">Mumbai</td><td style=\"padding: 5px;\">72.51 lakhs</td></tr><tr><td style=\"padding: 5px;\">Kolkata</td><td style=\"padding: 5px;\">66.17 lakhs</td></tr><tr><td style=\"padding: 5px;\">Lucknow</td><td style=\"padding: 5px;\">49.87 lakhs</td></tr><tr><td style=\"padding: 5px;\">Bhopal</td><td style=\"padding: 5px;\">41.54 lakhs</td></tr><tr><td style=\"padding: 5px;\">Kanpur</td><td style=\"padding: 5px;\">406.70 lakhs</td></tr><tr><td style=\"padding: 5px;\">Vadodara</td><td style=\"padding: 5px;\">2,935.02 lakhs</td></tr><tr><td style=\"padding: 5px;\">Ghaziabad</td><td style=\"padding: 5px;\">2,385.26 lakhs</td></tr><tr><td style=\"padding: 5px;\">Surat</td><td style=\"padding: 5px;\">2,137.53 lakhs</td></tr><tr><td style=\"padding: 5px;\">Delhi</td><td style=\"padding: 5px;\">196.10 lakhs</td></tr><tr><td style=\"padding: 5px;\">Hyderabad</td><td style=\"padding: 5px;\">158.24 lakhs</td></tr><tr><td style=\"padding: 5px;\">Ahmedabad</td><td style=\"padding: 5px;\">110.80 lakhs</td></tr><tr><td style=\"padding: 5px;\">Pune</td><td style=\"padding: 5px;\">10.18 lakhs</td></tr><tr><td style=\"padding: 5px;\">Chennai</td><td style=\"padding: 5px;\">1.16 lakhs</td></tr><tr><td style=\"padding: 5px;\">Nagpur</td><td style=\"padding: 5px;\">1,974.83 lakhs</td></tr><tr><td style=\"padding: 5px;\">Indore</td><td style=\"padding: 5px;\">1,486.80 lakhs</td></tr><tr><td style=\"padding: 5px;\">Jaipur</td><td style=\"padding: 5px;\">1,377.03 lakhs</td></tr><tr><td style=\"padding: 5px;\">coimbatore</td><td style=\"padding: 5px;\">0.58 lakhs</td></tr><tr><td style=\"padding: 5px;\">erode</td><td style=\"padding: 5px;\">0.52 lakhs</td></tr></table>"
+        }
+    ],
+    [
+        {
+            "sender": "user",
+            "text": "revenue by city"
+        },
+        {
+            "sender": "bot",
+            "text": "Hello! \ud83d\ude0a  \n\nThe revenue data in the current set is recorded for the following cities:\n\n- Surat  \n- Vadodara  \n\nLet me know if you\u2019d like to see the revenue details for a specific city or need anything else!\n\n<table border=\"1\" style=\"border-collapse: collapse; margin-top: 10px;\"><tr><th style=\"padding: 5px;\">Cities</th><th style=\"padding: 5px;\">Revenue(In_Lakhs)</th></tr><tr><td style=\"padding: 5px;\">Patna</td><td style=\"padding: 5px;\">772.96 lakhs</td></tr><tr><td style=\"padding: 5px;\">Bengaluru</td><td style=\"padding: 5px;\">742.32 lakhs</td></tr><tr><td style=\"padding: 5px;\">Mumbai</td><td style=\"padding: 5px;\">72.51 lakhs</td></tr><tr><td style=\"padding: 5px;\">Kolkata</td><td style=\"padding: 5px;\">66.17 lakhs</td></tr><tr><td style=\"padding: 5px;\">Lucknow</td><td style=\"padding: 5px;\">49.87 lakhs</td></tr><tr><td style=\"padding: 5px;\">Bhopal</td><td style=\"padding: 5px;\">41.54 lakhs</td></tr><tr><td style=\"padding: 5px;\">Kanpur</td><td style=\"padding: 5px;\">406.70 lakhs</td></tr><tr><td style=\"padding: 5px;\">Vadodara</td><td style=\"padding: 5px;\">2,935.02 lakhs</td></tr><tr><td style=\"padding: 5px;\">Ghaziabad</td><td style=\"padding: 5px;\">2,385.26 lakhs</td></tr><tr><td style=\"padding: 5px;\">Surat</td><td style=\"padding: 5px;\">2,137.53 lakhs</td></tr><tr><td style=\"padding: 5px;\">Delhi</td><td style=\"padding: 5px;\">196.10 lakhs</td></tr><tr><td style=\"padding: 5px;\">Hyderabad</td><td style=\"padding: 5px;\">158.24 lakhs</td></tr><tr><td style=\"padding: 5px;\">Ahmedabad</td><td style=\"padding: 5px;\">110.80 lakhs</td></tr><tr><td style=\"padding: 5px;\">Pune</td><td style=\"padding: 5px;\">10.18 lakhs</td></tr><tr><td style=\"padding: 5px;\">Chennai</td><td style=\"padding: 5px;\">1.16 lakhs</td></tr><tr><td style=\"padding: 5px;\">Nagpur</td><td style=\"padding: 5px;\">1,974.83 lakhs</td></tr><tr><td style=\"padding: 5px;\">Indore</td><td style=\"padding: 5px;\">1,486.80 lakhs</td></tr><tr><td style=\"padding: 5px;\">Jaipur</td><td style=\"padding: 5px;\">1,377.03 lakhs</td></tr><tr><td style=\"padding: 5px;\">coimbatore</td><td style=\"padding: 5px;\">0.58 lakhs</td></tr><tr><td style=\"padding: 5px;\">erode</td><td style=\"padding: 5px;\">0.52 lakhs</td></tr></table>"
+        }
+    ],
+    [
+        {
+            "sender": "user",
+            "text": "hhhffg"
+        },
+        {
+            "sender": "bot",
+            "text": "Hello! How can I help you with the billing data today?"
+        },
+        {
+            "sender": "user",
+            "text": "rev dept"
+        },
+        {
+            "sender": "bot",
+            "text": "Hello! \ud83d\ude0a I can share the revenue details for each admitting department in the dataset\u2014such as Gynecology, General Medicine, Gastroenterology, and Pediatrics. Let me know which department you\u2019d like to see the revenue for, and I\u2019ll provide the information.\n\nIs there anything else I can assist you with?"
+        },
+        {
+            "sender": "user",
+            "text": "all"
+        },
+        {
+            "sender": "bot",
+            "text": "Hello! How can I help you with the billing data today? Is there a specific department, city, doctor, or service you\u2019d like revenue information on? Let me know, and I\u2019ll find the details for you. Is there anything else I can assist you with?"
+        }
+    ],
+    [
+        {
+            "sender": "user",
+            "text": "revenue of cities"
+        },
+        {
+            "sender": "bot",
+            "text": "Hello! \ud83d\ude0a Here are the distinct values available in the current billing dataset:\n\n- **Year:** 2024  \n- **Financial Year:** 2024\u20112025  \n- **Quarter / Qtr:** Qtr\u202f2, Q1  \n- **Month:** April, May  \n- **Admitting Department:** Pulmonology, General Medicine, Gastroenterology  \n- **Doctor Name:** Dr.\u202fEthan\u202fMartin, Dr.\u202fEmily\u202fDavis  \n- **Ordering Doctor:** Dr.\u202fMichael\u202fBrown, Dr.\u202fEthan\u202fMartin  \n- **Group:** Therapy  \n- **Header:** Operation\u202fTheatre  \n- **Service:** X\u2011Ray  \n- **City:** Surat, Vadodara, Ghaziabad  \n\nLet me know if you\u2019d like details for any specific combination or have another question! Is there anything else I can assist you with?\n\n<table border=\"1\" style=\"border-collapse: collapse; margin-top: 10px;\"><tr><th style=\"padding: 5px;\">Cities</th><th style=\"padding: 5px;\">Revenue(In_Lakhs)</th></tr><tr><td style=\"padding: 5px;\">Patna</td><td style=\"padding: 5px;\">772.96 lakhs</td></tr><tr><td style=\"padding: 5px;\">Bengaluru</td><td style=\"padding: 5px;\">742.32 lakhs</td></tr><tr><td style=\"padding: 5px;\">Mumbai</td><td style=\"padding: 5px;\">72.51 lakhs</td></tr><tr><td style=\"padding: 5px;\">Kolkata</td><td style=\"padding: 5px;\">66.17 lakhs</td></tr><tr><td style=\"padding: 5px;\">Lucknow</td><td style=\"padding: 5px;\">49.87 lakhs</td></tr><tr><td style=\"padding: 5px;\">Bhopal</td><td style=\"padding: 5px;\">41.54 lakhs</td></tr><tr><td style=\"padding: 5px;\">Kanpur</td><td style=\"padding: 5px;\">406.70 lakhs</td></tr><tr><td style=\"padding: 5px;\">Vadodara</td><td style=\"padding: 5px;\">2,935.02 lakhs</td></tr><tr><td style=\"padding: 5px;\">Ghaziabad</td><td style=\"padding: 5px;\">2,385.26 lakhs</td></tr><tr><td style=\"padding: 5px;\">Surat</td><td style=\"padding: 5px;\">2,137.53 lakhs</td></tr><tr><td style=\"padding: 5px;\">Delhi</td><td style=\"padding: 5px;\">196.10 lakhs</td></tr><tr><td style=\"padding: 5px;\">Hyderabad</td><td style=\"padding: 5px;\">158.24 lakhs</td></tr><tr><td style=\"padding: 5px;\">Ahmedabad</td><td style=\"padding: 5px;\">110.80 lakhs</td></tr><tr><td style=\"padding: 5px;\">Pune</td><td style=\"padding: 5px;\">10.18 lakhs</td></tr><tr><td style=\"padding: 5px;\">Chennai</td><td style=\"padding: 5px;\">1.16 lakhs</td></tr><tr><td style=\"padding: 5px;\">Nagpur</td><td style=\"padding: 5px;\">1,974.83 lakhs</td></tr><tr><td style=\"padding: 5px;\">Indore</td><td style=\"padding: 5px;\">1,486.80 lakhs</td></tr><tr><td style=\"padding: 5px;\">Jaipur</td><td style=\"padding: 5px;\">1,377.03 lakhs</td></tr><tr><td style=\"padding: 5px;\">coimbatore</td><td style=\"padding: 5px;\">0.58 lakhs</td></tr><tr><td style=\"padding: 5px;\">erode</td><td style=\"padding: 5px;\">0.52 lakhs</td></tr></table>"
+        },
+        {
+            "sender": "user",
+            "text": "revenue of cities"
+        },
+        {
+            "sender": "bot",
+            "text": "Hello! \ud83d\ude0a Here are the distinct values available in the current billing dataset:\n\n- **Year:** 2024  \n- **Financial Year:** 2024\u20112025  \n- **Quarter / Qtr:** Qtr\u202f2, Q1  \n- **Month:** April, May  \n- **Admitting Department:** Pulmonology, General Medicine, Gastroenterology  \n- **Doctor Name:** Dr.\u202fEthan\u202fMartin, Dr.\u202fEmily\u202fDavis  \n- **Ordering Doctor:** Dr.\u202fMichael\u202fBrown, Dr.\u202fEthan\u202fMartin  \n- **Group:** Therapy  \n- **Header:** Operation\u202fTheatre  \n- **Service:** X\u2011Ray  \n- **City:** Surat, Vadodara, Ghaziabad  \n\nLet me know if you\u2019d like details for any specific combination or have another question! Is there anything else I can assist you with?\n\n<table border=\"1\" style=\"border-collapse: collapse; margin-top: 10px;\"><tr><th style=\"padding: 5px;\">Cities</th><th style=\"padding: 5px;\">Revenue(In_Lakhs)</th></tr><tr><td style=\"padding: 5px;\">Patna</td><td style=\"padding: 5px;\">772.96 lakhs</td></tr><tr><td style=\"padding: 5px;\">Bengaluru</td><td style=\"padding: 5px;\">742.32 lakhs</td></tr><tr><td style=\"padding: 5px;\">Mumbai</td><td style=\"padding: 5px;\">72.51 lakhs</td></tr><tr><td style=\"padding: 5px;\">Kolkata</td><td style=\"padding: 5px;\">66.17 lakhs</td></tr><tr><td style=\"padding: 5px;\">Lucknow</td><td style=\"padding: 5px;\">49.87 lakhs</td></tr><tr><td style=\"padding: 5px;\">Bhopal</td><td style=\"padding: 5px;\">41.54 lakhs</td></tr><tr><td style=\"padding: 5px;\">Kanpur</td><td style=\"padding: 5px;\">406.70 lakhs</td></tr><tr><td style=\"padding: 5px;\">Vadodara</td><td style=\"padding: 5px;\">2,935.02 lakhs</td></tr><tr><td style=\"padding: 5px;\">Ghaziabad</td><td style=\"padding: 5px;\">2,385.26 lakhs</td></tr><tr><td style=\"padding: 5px;\">Surat</td><td style=\"padding: 5px;\">2,137.53 lakhs</td></tr><tr><td style=\"padding: 5px;\">Delhi</td><td style=\"padding: 5px;\">196.10 lakhs</td></tr><tr><td style=\"padding: 5px;\">Hyderabad</td><td style=\"padding: 5px;\">158.24 lakhs</td></tr><tr><td style=\"padding: 5px;\">Ahmedabad</td><td style=\"padding: 5px;\">110.80 lakhs</td></tr><tr><td style=\"padding: 5px;\">Pune</td><td style=\"padding: 5px;\">10.18 lakhs</td></tr><tr><td style=\"padding: 5px;\">Chennai</td><td style=\"padding: 5px;\">1.16 lakhs</td></tr><tr><td style=\"padding: 5px;\">Nagpur</td><td style=\"padding: 5px;\">1,974.83 lakhs</td></tr><tr><td style=\"padding: 5px;\">Indore</td><td style=\"padding: 5px;\">1,486.80 lakhs</td></tr><tr><td style=\"padding: 5px;\">Jaipur</td><td style=\"padding: 5px;\">1,377.03 lakhs</td></tr><tr><td style=\"padding: 5px;\">coimbatore</td><td style=\"padding: 5px;\">0.58 lakhs</td></tr><tr><td style=\"padding: 5px;\">erode</td><td style=\"padding: 5px;\">0.52 lakhs</td></tr></table>"
+        },
+        {
+            "sender": "user",
+            "text": "revenue of cities"
+        },
+        {
+            "sender": "bot",
+            "text": "Hello! \ud83d\ude0a Here are the distinct values available in the current billing dataset:\n\n- **Year:** 2024  \n- **Financial Year:** 2024\u20112025  \n- **Quarter / Qtr:** Qtr\u202f2, Q1  \n- **Month:** April, May  \n- **Admitting Department:** Pulmonology, General Medicine, Gastroenterology  \n- **Doctor Name:** Dr.\u202fEthan\u202fMartin, Dr.\u202fEmily\u202fDavis  \n- **Ordering Doctor:** Dr.\u202fMichael\u202fBrown, Dr.\u202fEthan\u202fMartin  \n- **Group:** Therapy  \n- **Header:** Operation\u202fTheatre  \n- **Service:** X\u2011Ray  \n- **City:** Surat, Vadodara, Ghaziabad  \n\nLet me know if you\u2019d like details for any specific combination or have another question! Is there anything else I can assist you with?\n\n<table border=\"1\" style=\"border-collapse: collapse; margin-top: 10px;\"><tr><th style=\"padding: 5px;\">Cities</th><th style=\"padding: 5px;\">Revenue(In_Lakhs)</th></tr><tr><td style=\"padding: 5px;\">Patna</td><td style=\"padding: 5px;\">772.96 lakhs</td></tr><tr><td style=\"padding: 5px;\">Bengaluru</td><td style=\"padding: 5px;\">742.32 lakhs</td></tr><tr><td style=\"padding: 5px;\">Mumbai</td><td style=\"padding: 5px;\">72.51 lakhs</td></tr><tr><td style=\"padding: 5px;\">Kolkata</td><td style=\"padding: 5px;\">66.17 lakhs</td></tr><tr><td style=\"padding: 5px;\">Lucknow</td><td style=\"padding: 5px;\">49.87 lakhs</td></tr><tr><td style=\"padding: 5px;\">Bhopal</td><td style=\"padding: 5px;\">41.54 lakhs</td></tr><tr><td style=\"padding: 5px;\">Kanpur</td><td style=\"padding: 5px;\">406.70 lakhs</td></tr><tr><td style=\"padding: 5px;\">Vadodara</td><td style=\"padding: 5px;\">2,935.02 lakhs</td></tr><tr><td style=\"padding: 5px;\">Ghaziabad</td><td style=\"padding: 5px;\">2,385.26 lakhs</td></tr><tr><td style=\"padding: 5px;\">Surat</td><td style=\"padding: 5px;\">2,137.53 lakhs</td></tr><tr><td style=\"padding: 5px;\">Delhi</td><td style=\"padding: 5px;\">196.10 lakhs</td></tr><tr><td style=\"padding: 5px;\">Hyderabad</td><td style=\"padding: 5px;\">158.24 lakhs</td></tr><tr><td style=\"padding: 5px;\">Ahmedabad</td><td style=\"padding: 5px;\">110.80 lakhs</td></tr><tr><td style=\"padding: 5px;\">Pune</td><td style=\"padding: 5px;\">10.18 lakhs</td></tr><tr><td style=\"padding: 5px;\">Chennai</td><td style=\"padding: 5px;\">1.16 lakhs</td></tr><tr><td style=\"padding: 5px;\">Nagpur</td><td style=\"padding: 5px;\">1,974.83 lakhs</td></tr><tr><td style=\"padding: 5px;\">Indore</td><td style=\"padding: 5px;\">1,486.80 lakhs</td></tr><tr><td style=\"padding: 5px;\">Jaipur</td><td style=\"padding: 5px;\">1,377.03 lakhs</td></tr><tr><td style=\"padding: 5px;\">coimbatore</td><td style=\"padding: 5px;\">0.58 lakhs</td></tr><tr><td style=\"padding: 5px;\">erode</td><td style=\"padding: 5px;\">0.52 lakhs</td></tr></table>"
+        },
+        {
+            "sender": "user",
+            "text": "revenue of cities"
+        },
+        {
+            "sender": "bot",
+            "text": "Hello! \ud83d\ude0a Here are the distinct values available in the current billing dataset:\n\n- **Year:** 2024  \n- **Financial Year:** 2024\u20112025  \n- **Quarter / Qtr:** Qtr\u202f2, Q1  \n- **Month:** April, May  \n- **Admitting Department:** Pulmonology, General Medicine, Gastroenterology  \n- **Doctor Name:** Dr.\u202fEthan\u202fMartin, Dr.\u202fEmily\u202fDavis  \n- **Ordering Doctor:** Dr.\u202fMichael\u202fBrown, Dr.\u202fEthan\u202fMartin  \n- **Group:** Therapy  \n- **Header:** Operation\u202fTheatre  \n- **Service:** X\u2011Ray  \n- **City:** Surat, Vadodara, Ghaziabad  \n\nLet me know if you\u2019d like details for any specific combination or have another question! Is there anything else I can assist you with?\n\n<table border=\"1\" style=\"border-collapse: collapse; margin-top: 10px;\"><tr><th style=\"padding: 5px;\">Cities</th><th style=\"padding: 5px;\">Revenue(In_Lakhs)</th></tr><tr><td style=\"padding: 5px;\">Patna</td><td style=\"padding: 5px;\">772.96 lakhs</td></tr><tr><td style=\"padding: 5px;\">Bengaluru</td><td style=\"padding: 5px;\">742.32 lakhs</td></tr><tr><td style=\"padding: 5px;\">Mumbai</td><td style=\"padding: 5px;\">72.51 lakhs</td></tr><tr><td style=\"padding: 5px;\">Kolkata</td><td style=\"padding: 5px;\">66.17 lakhs</td></tr><tr><td style=\"padding: 5px;\">Lucknow</td><td style=\"padding: 5px;\">49.87 lakhs</td></tr><tr><td style=\"padding: 5px;\">Bhopal</td><td style=\"padding: 5px;\">41.54 lakhs</td></tr><tr><td style=\"padding: 5px;\">Kanpur</td><td style=\"padding: 5px;\">406.70 lakhs</td></tr><tr><td style=\"padding: 5px;\">Vadodara</td><td style=\"padding: 5px;\">2,935.02 lakhs</td></tr><tr><td style=\"padding: 5px;\">Ghaziabad</td><td style=\"padding: 5px;\">2,385.26 lakhs</td></tr><tr><td style=\"padding: 5px;\">Surat</td><td style=\"padding: 5px;\">2,137.53 lakhs</td></tr><tr><td style=\"padding: 5px;\">Delhi</td><td style=\"padding: 5px;\">196.10 lakhs</td></tr><tr><td style=\"padding: 5px;\">Hyderabad</td><td style=\"padding: 5px;\">158.24 lakhs</td></tr><tr><td style=\"padding: 5px;\">Ahmedabad</td><td style=\"padding: 5px;\">110.80 lakhs</td></tr><tr><td style=\"padding: 5px;\">Pune</td><td style=\"padding: 5px;\">10.18 lakhs</td></tr><tr><td style=\"padding: 5px;\">Chennai</td><td style=\"padding: 5px;\">1.16 lakhs</td></tr><tr><td style=\"padding: 5px;\">Nagpur</td><td style=\"padding: 5px;\">1,974.83 lakhs</td></tr><tr><td style=\"padding: 5px;\">Indore</td><td style=\"padding: 5px;\">1,486.80 lakhs</td></tr><tr><td style=\"padding: 5px;\">Jaipur</td><td style=\"padding: 5px;\">1,377.03 lakhs</td></tr><tr><td style=\"padding: 5px;\">coimbatore</td><td style=\"padding: 5px;\">0.58 lakhs</td></tr><tr><td style=\"padding: 5px;\">erode</td><td style=\"padding: 5px;\">0.52 lakhs</td></tr></table>"
+        }
+    ],
+    [
+        {
+            "sender": "user",
+            "text": "revenue of cities"
+        },
+        {
+            "sender": "bot",
+            "text": "Hello! \ud83d\udc4b The dataset includes revenue information for the following cities:\n\n- Surat  \n- Vadodara  \n- Ghaziabad  \n\nYou can view the specific revenue figures for each city in the provided data table. Let me know if you\u2019d like any other details or help with something else!\n\n<table border=\"1\" style=\"border-collapse: collapse; margin-top: 10px;\"><tr><th style=\"padding: 5px;\">Cities</th><th style=\"padding: 5px;\">Revenue(In_Lakhs)</th></tr><tr><td style=\"padding: 5px;\">Patna</td><td style=\"padding: 5px;\">772.96 lakhs</td></tr><tr><td style=\"padding: 5px;\">Bengaluru</td><td style=\"padding: 5px;\">742.32 lakhs</td></tr><tr><td style=\"padding: 5px;\">Mumbai</td><td style=\"padding: 5px;\">72.51 lakhs</td></tr><tr><td style=\"padding: 5px;\">Kolkata</td><td style=\"padding: 5px;\">66.17 lakhs</td></tr><tr><td style=\"padding: 5px;\">Lucknow</td><td style=\"padding: 5px;\">49.87 lakhs</td></tr><tr><td style=\"padding: 5px;\">Bhopal</td><td style=\"padding: 5px;\">41.54 lakhs</td></tr><tr><td style=\"padding: 5px;\">Kanpur</td><td style=\"padding: 5px;\">406.70 lakhs</td></tr><tr><td style=\"padding: 5px;\">Vadodara</td><td style=\"padding: 5px;\">2,935.02 lakhs</td></tr><tr><td style=\"padding: 5px;\">Ghaziabad</td><td style=\"padding: 5px;\">2,385.26 lakhs</td></tr><tr><td style=\"padding: 5px;\">Surat</td><td style=\"padding: 5px;\">2,137.53 lakhs</td></tr><tr><td style=\"padding: 5px;\">Delhi</td><td style=\"padding: 5px;\">196.10 lakhs</td></tr><tr><td style=\"padding: 5px;\">Hyderabad</td><td style=\"padding: 5px;\">158.24 lakhs</td></tr><tr><td style=\"padding: 5px;\">Ahmedabad</td><td style=\"padding: 5px;\">110.80 lakhs</td></tr><tr><td style=\"padding: 5px;\">Pune</td><td style=\"padding: 5px;\">10.18 lakhs</td></tr><tr><td style=\"padding: 5px;\">Chennai</td><td style=\"padding: 5px;\">1.16 lakhs</td></tr><tr><td style=\"padding: 5px;\">Nagpur</td><td style=\"padding: 5px;\">1,974.83 lakhs</td></tr><tr><td style=\"padding: 5px;\">Indore</td><td style=\"padding: 5px;\">1,486.80 lakhs</td></tr><tr><td style=\"padding: 5px;\">Jaipur</td><td style=\"padding: 5px;\">1,377.03 lakhs</td></tr><tr><td style=\"padding: 5px;\">coimbatore</td><td style=\"padding: 5px;\">0.58 lakhs</td></tr><tr><td style=\"padding: 5px;\">erode</td><td style=\"padding: 5px;\">0.52 lakhs</td></tr></table>"
+        }
+    ],
+    [
+        {
+            "sender": "user",
+            "text": "revenue"
+        },
+        {
+            "sender": "bot",
+            "text": "low"
+        },
+        {
+            "sender": "user",
+            "text": "revenue"
+        },
+        {
+            "sender": "bot",
+            "text": "low"
+        }
+    ],
+    [
+        {
+            "sender": "user",
+            "text": "revenue on cities"
+        },
+        {
+            "sender": "bot",
+            "text": "Hello! \ud83d\udc4b I see that our billing records include revenue information for the following cities:\n\n- Surat  \n- Vadodara  \n- Bhopal  \n\nLet me know which city you\u2019d like to explore, and I can share the relevant revenue details. Is there anything else I can help you with?\n\n<table border=\"1\" style=\"border-collapse: collapse; margin-top: 10px;\"><tr><th style=\"padding: 5px;\">Cities</th><th style=\"padding: 5px;\">Revenue(In_Lakhs)</th></tr><tr><td style=\"padding: 5px;\">Patna</td><td style=\"padding: 5px;\">772.96 lakhs</td></tr><tr><td style=\"padding: 5px;\">Bengaluru</td><td style=\"padding: 5px;\">742.32 lakhs</td></tr><tr><td style=\"padding: 5px;\">Mumbai</td><td style=\"padding: 5px;\">72.51 lakhs</td></tr><tr><td style=\"padding: 5px;\">Kolkata</td><td style=\"padding: 5px;\">66.17 lakhs</td></tr><tr><td style=\"padding: 5px;\">Lucknow</td><td style=\"padding: 5px;\">49.87 lakhs</td></tr><tr><td style=\"padding: 5px;\">Bhopal</td><td style=\"padding: 5px;\">41.54 lakhs</td></tr><tr><td style=\"padding: 5px;\">Kanpur</td><td style=\"padding: 5px;\">406.70 lakhs</td></tr><tr><td style=\"padding: 5px;\">Vadodara</td><td style=\"padding: 5px;\">2,935.02 lakhs</td></tr><tr><td style=\"padding: 5px;\">Ghaziabad</td><td style=\"padding: 5px;\">2,385.26 lakhs</td></tr><tr><td style=\"padding: 5px;\">Surat</td><td style=\"padding: 5px;\">2,137.53 lakhs</td></tr><tr><td style=\"padding: 5px;\">Delhi</td><td style=\"padding: 5px;\">196.10 lakhs</td></tr><tr><td style=\"padding: 5px;\">Hyderabad</td><td style=\"padding: 5px;\">158.24 lakhs</td></tr><tr><td style=\"padding: 5px;\">Ahmedabad</td><td style=\"padding: 5px;\">110.80 lakhs</td></tr><tr><td style=\"padding: 5px;\">Pune</td><td style=\"padding: 5px;\">10.18 lakhs</td></tr><tr><td style=\"padding: 5px;\">Chennai</td><td style=\"padding: 5px;\">1.16 lakhs</td></tr><tr><td style=\"padding: 5px;\">Nagpur</td><td style=\"padding: 5px;\">1,974.83 lakhs</td></tr><tr><td style=\"padding: 5px;\">Indore</td><td style=\"padding: 5px;\">1,486.80 lakhs</td></tr><tr><td style=\"padding: 5px;\">Jaipur</td><td style=\"padding: 5px;\">1,377.03 lakhs</td></tr><tr><td style=\"padding: 5px;\">coimbatore</td><td style=\"padding: 5px;\">0.58 lakhs</td></tr><tr><td style=\"padding: 5px;\">erode</td><td style=\"padding: 5px;\">0.52 lakhs</td></tr></table>"
+        },
+        {
+            "sender": "user",
+            "text": "rev on april 2024"
+        },
+        {
+            "sender": "bot",
+            "text": "Hello! \ud83d\ude0a There\u2019s no revenue data for April\u202f2024 in the records we have. Is there anything else I can help you with?"
+        },
+        {
+            "sender": "user",
+            "text": "rev on dermo on apeil month 2024"
+        },
+        {
+            "sender": "bot",
+            "text": "Hello! \ud83d\ude0a The revenue recorded for Dermatology (Dermo) in April\u202f2024 was **\u20b90.00\u202flakhs**. \n\nIs there anything else I can help you with?\n\n<table border=\"1\" style=\"border-collapse: collapse; margin-top: 10px;\"><tr><th style=\"padding: 5px;\">Admitting Department</th><th style=\"padding: 5px;\">Revenue(In_Lakhs)</th></tr><tr><td style=\"padding: 5px;\">Dermatology</td><td style=\"padding: 5px;\">120.45 lakhs</td></tr></table>"
+        },
+        {
+            "sender": "user",
+            "text": "rev on dermo"
+        },
+        {
+            "sender": "bot",
+            "text": "Hello! \ud83d\ude0a The Dermatology (dermo) department has several revenue entries in the records, ranging from \u20b90.00\u202flakhs up to \u20b91.71\u202flakhs across different dates and locations. Let me know if you\u2019d like the revenue for a specific day, city, or doctor, and I\u2019ll gladly share the details. Is there anything else I can assist you with?\n\n<table border=\"1\" style=\"border-collapse: collapse; margin-top: 10px;\"><tr><th style=\"padding: 5px;\">Admitting Department</th><th style=\"padding: 5px;\">Revenue(In_Lakhs)</th></tr><tr><td style=\"padding: 5px;\">Dermatology</td><td style=\"padding: 5px;\">120.45 lakhs</td></tr></table>"
+        }
+    ]
+]

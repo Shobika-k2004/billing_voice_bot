@@ -1,0 +1,172 @@
+original_value,mapped_value,type
+Qtr 2,Q2,abbreviation
+April,Apr,abbreviation
+May,May,original
+2024-2025,2024-2025,original
+Q1,Q1,original
+Cardiology,cardio,abbreviation
+Cardiology,cardiology,lowercase
+Dermatology,dermo,abbreviation
+Dermatology,dermat,abbreviation
+Dermatology,dermatology,lowercase
+ENT,ent,lowercase
+Gastroenterology,gastro,abbreviation
+Gastroenterology,gastroenterology,lowercase
+General Medicine,gen med,abbreviation
+General Medicine,general medicine,lowercase
+Gynecology,gyn,abbreviation
+Gynecology,gyne,abbreviation
+Gynecology,gynecology,lowercase
+Nephrology,nephro,abbreviation
+Nephrology,nephrology,lowercase
+Neurology,neuro,abbreviation
+Neurology,neurology,lowercase
+Oncology,onco,abbreviation
+Oncology,oncology,lowercase
+Orthopedics,ortho,abbreviation
+Orthopedics,orthopedics,lowercase
+Pediatrics,pedia,abbreviation
+Pediatrics,pediatrics,lowercase
+Psychiatry,psych,abbreviation
+Psychiatry,psychiatry,lowercase
+Pulmonology,pulmo,abbreviation
+Pulmonology,pulmonology,lowercase
+Radiology,radio,abbreviation
+Radiology,radiology,lowercase
+Urology,uro,abbreviation
+Urology,urology,lowercase
+Dr. Ethan Martin,ethan,first_name
+Dr. Ethan Martin,martin,last_name
+Dr. Isabella Garcia,isabella,first_name
+Dr. Isabella Garcia,garcia,last_name
+Dr. John Smith,john,first_name
+Dr. John Smith,smith,last_name
+Dr. Neha Kapoor,neha,first_name
+Dr. Neha Kapoor,kapoor,last_name
+Dr. Sophia Wilson,sophia,first_name
+Dr. Sophia Wilson,wilson,last_name
+Dr. Ananya Rao,ananya,first_name
+Dr. Ananya Rao,rao,last_name
+Dr. Olivia Johnson,olivia,first_name
+Dr. Olivia Johnson,johnson,last_name
+Dr. Priya Sharma,priya,first_name
+Dr. Priya Sharma,sharma,last_name
+Dr. William White,william,first_name
+Dr. William White,white,last_name
+Dr. Karthik Reddy,karthik,first_name
+Dr. Karthik Reddy,reddy,last_name
+Dr. Ava Thomas,ava,first_name
+Dr. Ava Thomas,thomas,last_name
+Dr. Emily Davis,emily,first_name
+Dr. Emily Davis,davis,last_name
+Dr. Rahul Menon,rahul,first_name
+Dr. Rahul Menon,menon,last_name
+Dr. Sneha Iyer,sneha,first_name
+Dr. Sneha Iyer,iyer,last_name
+Dr. Arjun Mehta,arjun,first_name
+Dr. Arjun Mehta,mehta,last_name
+Dr. Daniel Taylor,daniel,first_name
+Dr. Daniel Taylor,taylor,last_name
+Dr. Rohan Nair,rohan,first_name
+Dr. Rohan Nair,nair,last_name
+Dr. Michael Brown,michael,first_name
+Dr. Michael Brown,brown,last_name
+Outpatient,outpatient,lowercase
+Therapy,therapy,lowercase
+General Services,general services,lowercase
+Diagnostics,diagnostics,lowercase
+Pharmacy,pharmacy,lowercase
+Inpatient,inpatient,lowercase
+Surgical,surgical,lowercase
+ICU,icu,lowercase
+Medical,medical,lowercase
+Emergency,emergency,lowercase
+Emergency,emerg,abbreviation
+Operation Theatre,operation theatre,lowercase
+Lab Services,lab services,lowercase
+Consultation,consultation,lowercase
+Nursing,nursing,lowercase
+Blood Bank,blood bank,lowercase
+Radiology,radiology,lowercase
+Physiotherapy,physiotherapy,lowercase
+Pharmacy,pharmacy,lowercase
+Health Checkup,health checkup,lowercase
+X-Ray,xray,abbreviation
+X-Ray,x-ray,hyphenated
+Vadodara,vadodara,lowercase
+Mumbai,mumbai,lowercase
+Bhopal,bhopal,lowercase
+Ahmedabad,ahmedabad,lowercase
+Patna,patna,lowercase
+Surat,surat,lowercase
+Indore,indore,lowercase
+Hyderabad,hyd,abbreviation
+Hyderabad,hyderabad,lowercase
+Kolkata,kolkata,lowercase
+Lucknow,lucknow,lowercase
+Bengaluru,blr,abbreviation
+Bengaluru,bangalore,alternative_spelling
+Bengaluru,bengaluru,lowercase
+Nagpur,nagpur,lowercase
+Pune,pune,lowercase
+Ghaziabad,ghaziabad,lowercase
+Jaipur,jaipur,lowercase
+Chennai,chn,abbreviation
+Chennai,chennai,lowercase
+Delhi,delhi,lowercase
+Kanpur,kanpur,lowercase
+coimbatore,cbe,abbreviation
+coimbatore,kovai,abbreviation
+coimbatore,coimbatore,lowercase
+erode,erode,lowercase
+January,jan,abbreviation
+February,feb,abbreviation
+March,mar,abbreviation
+April,apr,abbreviation
+May,may,abbreviation
+June,jun,abbreviation
+July,jul,abbreviation
+August,aug,abbreviation
+September,sep,abbreviation
+October,oct,abbreviation
+November,nov,abbreviation
+December,dec,abbreviation
+Q1,q1,lowercase
+Q2,q2,lowercase
+Q3,q3,lowercase
+Q4,q4,lowercase
+laboratory,lab,abbreviation
+x-ray,xray,abbreviation
+ct scan,ct,abbreviation
+mri,mri,lowercase
+ultrasound,ultra,abbreviation
+echocardiography,echo,abbreviation
+electrocardiogram,ecg,abbreviation
+electrocardiogram,ekg,alternative_spelling
+blood investigation,blood test,synonym
+urine analysis,urine test,synonym
+stool analysis,stool test,synonym
+general medicine,med,synonym
+general surgery,surg,synonym
+orthopedics,ortho,synonym
+neurology,neuro,synonym
+cardiology,cardio,synonym
+pulmonology,pulm,synonym
+gastroenterology,gastro,synonym
+nephrology,neph,synonym
+hematology,hem,synonym
+oncology,onco,synonym
+endocrinology,endo,synonym
+rheumatology,rheum,synonym
+dermatology,derm,synonym
+psychiatry,psych,synonym
+pediatrics,pedia,synonym
+obstetrics,obs,synonym
+gynecology,gyn,synonym
+ent,ent,lowercase
+ophthalmology,opthal,synonym
+radiology,radio,synonym
+revenue,rev,abbreviation
+amount,amt,abbreviation
+total,tot,abbreviation
+total,sum,synonym

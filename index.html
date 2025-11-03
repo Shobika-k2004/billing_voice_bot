@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q&A Bot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      height: 100vh;
+      display: flex;
+      background: linear-gradient(135deg, #f0f2f5, #dceaf7);
+    }
+
+    /* Sidebar */
+    #sidebar {
+      width: 220px;
+      background: #fff;
+      border-right: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    #sidebar h3 {
+      margin: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+          text-align: center;
+    }
+
+    #history-list {
+      flex: 1;
+      overflow-y: auto;
+      scrollbar-width: thin;
+    }
+
+    .history-item {
+      padding: 6px 8px;
+      margin: 4px 0;
+      background: #f7f7f7;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .history-item:hover {
+      background: #e6f3ff;
+    }
+
+    #view-all-histories {
+      padding: 10px;
+      background:#007bff;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    #view-all-histories:hover {
+      background: #0056b3;
+    }
+
+    #new-chat {
+      margin-top: auto;
+      padding: 10px;
+      background:#005a90;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    #new-chat:hover {
+      background: #5694bb;
+    }
+
+    /* Chat area */
+    #chat-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      align-items: center;
+          background: #005a90;
+    }
+
+    #chat-title {
+      font-size: 26px;
+      font-weight: bold;
+      margin:10px;
+      color:#ffffff;
+    }
+
+    #chat-container {
+      width: 100%;
+      max-width: 1140px;
+      height: 100%;
+      padding: 20px 20px 120px 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background:#ffffff;
+      scrollbar-width: thin;
+    }
+
+    .message {
+      max-width: 75%;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 14px;
+      position: relative;
+      word-wrap: break-word;
+      line-height: 1.5;
+    }
+
+    .user-message {
+      width: 250px;
+      align-self: flex-end;
+      background: #e6f2fa;
+      color: rgb(0, 0, 0);
+      border-radius: 12px 12px 4px 12px;
+    }
+
+    .bot-message {
+      align-self: flex-start;
+      background:#f3f3f3;
+      color: #333;
+      border-radius: 12px 12px 12px 4px;
+    }
+
+    .timestamp {
+      font-size: 12px;
+      color: #888;
+      margin-top: 4px;
+      text-align: right;
+    }
+
+    /* Input bar */
+    #input-bar {
+      display: flex;
+      justify-content: center;
+      padding: 8px 0;
+      border-top: 1px solid #ddd;
+      background: #fff;
+      position: fixed;
+      bottom: 0;
+      width: 82%;
+      z-index: 10;
+    }
+
+    .input-wrapper {
+      display: flex;
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    #question {
+      width: 100%;
+      padding: 8px 60px 8px 14px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 14px;
+      outline: none;
+      background: #f9f9f9;
+      height: 36px;
+    }
+
+    #recordButton,
+    #ask {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #recordButton {
+      right: 36px;
+      color: #666;
+    }
+
+    #ask {
+      right: 10px;
+      color: #005A90;
+    }
+
+    /* Optional: language selector */
+    #language {
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 13px;
+    }
+
+    /* Typing indicator */
+    .typing-indicator {
+      align-self: flex-start;
+      background: #e6f3ff;
+      color: #333;
+      border-radius: 12px 12px 12px 4px;
+      padding: 10px 14px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .typing-dots {
+      display: flex;
+      gap: 2px;
+    }
+
+    .typing-dot {
+      width: 4px;
+      height: 4px;
+      background: #333;
+      border-radius: 50%;
+      animation: typing 1.4s infinite ease-in-out;
+    }
+
+    .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+    .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+    .typing-dot:nth-child(3) { animation-delay: 0s; }
+
+    @keyframes typing {
+      0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); }
+      40% { opacity: 1; transform: scale(1); }
+    }
+
+    /* Scrollbar tweak */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Processing indicator */
+    #processingIndicator {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    .processing-spinner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #007bff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <span style="font-size: 24px; margin-right: 10px; vertical-align: middle; display: flex;">
+    <h3>History</h3></span>
+    <div id="history-list" onclick="fnhistory()"></div>
+    <div id="history-panel"></div>
+    <div id="new-chat">+ New Chat</div>
+  </div>
+
+  <!-- Chat area -->
+  <div id="chat-area">
+    <div id="chat-title">Q & A</div>
+    <div id="chat-container"></div>
+
+    <!-- Processing indicator -->
+    <div id="processingIndicator">
+      <div class="processing-spinner">
+        <div class="spinner"></div>
+        <span>Processing your request...</span>
+      </div>
+    </div>
+
+    <!-- Suggestions bar above input -->
+    <div id="suggestions-bar" style="display: flex; justify-content: center; padding: 8px; background: #fff; border-top: 1px solid #ddd; position: fixed; bottom: 60px; width: 82%; z-index: 9;">
+      <div id="suggestions" style="display: flex; gap: 8px; flex-wrap: wrap;"></div>
+    </div>
+
+    <div id="input-bar">
+      <div class="input-wrapper">
+        <input type="text" id="question" placeholder="Type your question...">
+        <button id="recordButton">🎤</button>
+        <button id="ask">➤</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const chatContainer = document.getElementById('chat-container');
+    const askBtn = document.getElementById('ask');
+    const input = document.getElementById('question');
+    const historyList = document.getElementById('history-list');
+    const suggestionsDiv = document.getElementById('suggestions');
+    const processingIndicator = document.getElementById('processingIndicator');
+
+    let chatHistory = [];
+    let currentChat = [];
+
+    function showProcessingIndicator() {
+      if (processingIndicator) {
+        processingIndicator.style.display = 'block';
+      }
+    }
+
+    function hideProcessingIndicator() {
+      if (processingIndicator) {
+        processingIndicator.style.display = 'none';
+      }
+    }
+
+    function addMessage(text, sender, messageId = null) {
+      const msg = document.createElement('div');
+      msg.className = `message ${sender}-message`;
+      msg.innerHTML = text.replace(/\n/g, '<br>');
+
+      const footer = document.createElement('div');
+      footer.style.display = 'flex';
+      footer.style.justifyContent = 'space-between';
+      footer.style.alignItems = 'center';
+      footer.style.marginTop = '4px';
+
+      const timestamp = document.createElement('div');
+      timestamp.className = 'timestamp';
+      timestamp.textContent = new Date().toLocaleTimeString();
+
+      footer.appendChild(timestamp);
+
+      if (sender === 'bot' && messageId) {
+        const feedbackDiv = document.createElement('div');
+        feedbackDiv.innerHTML = `
+          <button onclick="sendFeedback('${messageId}','good')" style="border: none; background: none; cursor: pointer; font-size: 14px; margin-right: 5px;">👍</button>
+          <button onclick="sendFeedback('${messageId}','bad')" style="border: none; background: none; cursor: pointer; font-size: 14px;">👎</button>
+        `;
+        footer.appendChild(feedbackDiv);
+      }
+
+      msg.appendChild(footer);
+      chatContainer.appendChild(msg);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+
+      currentChat.push({ sender, text });
+    }
+
+    async function saveChatToHistory() {
+   if (currentChat.length > 0) {
+     // Find the first user message to use as summary
+     const userMessages = currentChat.filter(msg => msg.sender === 'user');
+     const summary = userMessages.length > 0 ? userMessages[0].text.slice(0, 30) + (userMessages[0].text.length > 30 ? '...' : '') : 'New Chat';
+
+     const item = document.createElement('div');
+     item.className = 'history-item';
+     item.textContent = summary;
+     item.onclick = () => loadChat(currentChat);
+     historyList.appendChild(item);
+     historyList.scrollTop = historyList.scrollTop = historyList.scrollHeight;
+
+     chatHistory.push(currentChat);
+
+     // Save to localStorage
+     const savedHistory = JSON.parse(localStorage.getItem('chat_history')) || [];
+     savedHistory.push(currentChat);
+     localStorage.setItem('chat_history', JSON.stringify(savedHistory));
+
+     // Optional: save to server
+     try {
+       await fetch('/save_chat', {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify({ chat: currentChat })
+       });
+     } catch (error) {
+       console.error('Error saving chat:', error);
+     }
+   }
+ }
+
+    function loadChat(chat) {
+      chatContainer.innerHTML = '';
+      // Skip the welcome message and show only user queries and bot responses
+      const filteredChat = chat.filter((msg, index) => {
+        // Skip the first bot message (welcome message) and any empty messages
+        return !(index === 0 && msg.sender === 'bot' && msg.text.includes('Aosta Backbone'));
+      });
+      filteredChat.forEach(msg => addMessage(msg.text, msg.sender));
+    }
+
+    function showTypingIndicator() {
+      const indicator = document.createElement('div');
+      indicator.className = 'typing-indicator';
+      indicator.id = 'typing-indicator';
+      indicator.innerHTML = `
+        <span>Bot is typing</span>
+        <div class="typing-dots">
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+        </div>
+      `;
+      chatContainer.appendChild(indicator);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    function hideTypingIndicator() {
+      const indicator = document.getElementById('typing-indicator');
+      if (indicator) {
+        indicator.remove();
+      }
+    }
+
+    document.getElementById('new-chat').addEventListener('click', () => {
+       // Only save to history if there are actual user messages
+       if (currentChat.some(msg => msg.sender === 'user')) {
+         saveChatToHistory();
+       }
+       chatContainer.innerHTML = '';
+       currentChat = [];
+       addMessage("I am the backbone Aosta bot — here to help you with billing",'bot');
+     });
+
+    askBtn.addEventListener('click', sendQuestion);
+    input.addEventListener('keypress', (e) => {
+       if (e.key === 'Enter') sendQuestion();
+     });
+
+    // Mic recording variables
+    let isRecording = false;
+    let mediaRecorder;
+    let audioChunks = [];
+
+    // Add mic button event listener
+    const recordButton = document.getElementById('recordButton');
+    recordButton.addEventListener('click', async () => {
+       console.log('Mic button clicked');
+       if (!isRecording) {
+           try {
+               console.log('Starting recording...');
+               const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+               mediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm; codecs=opus' });
+
+               mediaRecorder.ondataavailable = event => {
+                   console.log('Audio data available');
+                   audioChunks.push(event.data);
+               };
+
+               mediaRecorder.onstop = () => {
+                   console.log('Recording stopped, sending to server...');
+                   showProcessingIndicator();
+                   sendAudioToServer();
+               };
+
+               mediaRecorder.start();
+               isRecording = true;
+               recordButton.textContent = '⏹️'; // Stop icon
+               recordButton.style.color = 'red';
+               console.log('Recording started');
+           } catch (error) {
+               console.error("Error accessing microphone:", error);
+               addMessage('⚠️ Error: Could not access microphone. Please check permissions.', 'bot');
+           }
+       } else {
+           console.log('Stopping recording...');
+           mediaRecorder.stop();
+           isRecording = false;
+           recordButton.textContent = '🎤';
+           recordButton.style.color = '#666';
+       }
+    });
+
+    async function sendAudioToServer() {
+       console.log('Processing audio...');
+       const audioBlob = new Blob(audioChunks, { type: 'audio/webm; codecs=opus' });
+       audioChunks = [];
+
+       const reader = new FileReader();
+       reader.readAsDataURL(audioBlob);
+       reader.onloadend = async () => {
+           const base64Audio = reader.result.split(',')[1];
+
+           try {
+               console.log('Sending audio to /transcribe...');
+               const response = await fetch('/transcribe', {
+                   method: 'POST',
+                   headers: { 'Content-Type': 'application/json' },
+                   body: JSON.stringify({ audio: base64Audio, languageCode: 'en-US' }),
+               });
+
+               if (!response.ok) {
+                   throw new Error(`Server error: ${response.statusText}`);
+               }
+
+               const data = await response.json();
+               console.log('Transcription received:', data);
+               if (data.text) {
+                   // Put transcription in the text input box (but don't auto-send)
+                   input.value = data.text;
+                   // Focus on input for editing
+                   input.focus();
+                   // Add visual indication that transcription is ready
+                   input.style.borderColor = '#28a745';
+                   setTimeout(() => {
+                       input.style.borderColor = '#ccc';
+                   }, 2000);
+                   hideProcessingIndicator();
+               } else {
+                   addMessage('⚠️ Could not transcribe audio. Please try again.', 'bot');
+                   hideProcessingIndicator();
+               }
+           } catch (error) {
+               console.error("Error sending audio to server:", error);
+               addMessage('⚠️ Error connecting to server.', 'bot');
+               hideProcessingIndicator();
+           }
+       };
+    }
+
+    async function sendQuestion() {
+      const q = input.value.trim();
+      if (!q) return;
+      addMessage(q, 'user');
+      input.value = '';
+      showTypingIndicator();
+      showProcessingIndicator();
+
+      try {
+        const response = await fetch('/ask', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question: q })
+        });
+
+        const data = await response.json();
+        console.log('Received data:', data);
+        hideTypingIndicator();
+        hideProcessingIndicator();
+
+        // Display suggestions if available
+        if (data.suggestions && data.suggestions.length > 0) {
+          displaySuggestions(data.suggestions);
+        } else {
+          clearSuggestions();
+        }
+
+        let botReply = data.answer;
+        if (data.rows && data.rows.length > 0) {
+          botReply += '\n\n' + formatTable(data.rows);
+        }
+        console.log('Bot reply:', botReply);
+        const messageId = Date.now();
+        addMessage(botReply, 'bot', messageId);
+      } catch (error) {
+        hideTypingIndicator();
+        hideProcessingIndicator();
+        addMessage('⚠️ Error fetching response.', 'bot');
+      }
+    }
+
+    function fnhistory() {
+  // Clear current chat view
+  chatContainer.innerHTML = '';
+
+  // Load history from localStorage
+  const savedHistory = JSON.parse(localStorage.getItem('chat_history')) || [];
+
+  // If there's no history, show a message
+  if (savedHistory.length === 0) {
+    const emptyMsg = document.createElement('div');
+    emptyMsg.textContent = 'No saved history found.';
+    chatContainer.appendChild(emptyMsg);
+    return;
+  }
+
+  // Display each conversation
+  savedHistory.forEach((chat, index) => {
+    const historyBlock = document.createElement('div');
+    historyBlock.style.marginBottom = '20px';
+
+    const title = document.createElement('h4');
+    title.textContent = `Chat #${index + 1}`;
+    historyBlock.appendChild(title);
+
+    chat.forEach(msg => {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `message ${msg.sender}-message`;
+      msgDiv.innerHTML = msg.text.replace(/\n/g, '<br>');
+      historyBlock.appendChild(msgDiv);
+    });
+
+    chatContainer.appendChild(historyBlock);
+  });
+}
+
+
+    function formatTable(rows) {
+      if (!rows || rows.length === 0) return '';
+      const headers = Object.keys(rows[0]);
+      let table = '<table border="1" style="border-collapse: collapse; margin-top: 10px;">';
+      table += '<tr>' + headers.map(h => `<th style="padding: 5px;">${h}</th>`).join('') + '</tr>';
+      rows.forEach(row => {
+        table += '<tr>' + headers.map(h => `<td style="padding: 5px;">${row[h] || ''}</td>`).join('') + '</tr>';
+      });
+      table += '</table>';
+      return table;
+    }
+
+    async function sendFeedback(id, type) {
+       await fetch("/feedback", {
+         method: "POST",
+         headers: {"Content-Type": "application/json"},
+         body: JSON.stringify({ message_id: id, feedback: type })
+       });
+       // Optional: show feedback recorded
+       alert("Feedback recorded");
+     }
+
+    function displaySuggestions(suggestions) {
+      suggestionsDiv.innerHTML = '';
+      suggestions.forEach(suggestion => {
+        const button = document.createElement('button');
+        button.textContent = suggestion;
+        button.style.padding = '6px 12px';
+        button.style.border = '1px solid #ddd';
+        button.style.borderRadius = '15px';
+        button.style.background = '#f8f9fa';
+        button.style.cursor = 'pointer';
+        button.style.fontSize = '13px';
+        button.onclick = () => {
+          input.value = suggestion;
+          clearSuggestions();
+          input.focus();
+        };
+        suggestionsDiv.appendChild(button);
+      });
+    }
+
+    function clearSuggestions() {
+      suggestionsDiv.innerHTML = '';
+    }
+
+    // Auto-suggestions on input
+    input.addEventListener('input', async () => {
+      const query = input.value.trim();
+      if (query.length < 2) {
+        clearSuggestions();
+        return;
+      }
+
+      try {
+        const response = await fetch(`/suggestions?q=${encodeURIComponent(query)}`);
+        const data = await response.json();
+        displaySuggestions(data.suggestions);
+      } catch (error) {
+        console.error('Error fetching suggestions:', error);
+        clearSuggestions();
+      }
+    });
+
+    // Add welcome message on page load
+    window.addEventListener('load', () => {
+      addMessage("I am the backbone Aosta bot — here to help you with billing",'bot');
+    });
+  </script>
+</body>
+</html>
