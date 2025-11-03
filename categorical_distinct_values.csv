@@ -1,0 +1,98 @@
+column,distinct_value
+Quarter,Qtr 2
+Month,April
+Month,May
+Financialyear,2024-2025
+Qtr,Q1
+Admitting Department,Cardiology
+Admitting Department,Dermatology
+Admitting Department,ENT
+Admitting Department,Gastroenterology
+Admitting Department,General Medicine
+Admitting Department,Gynecology
+Admitting Department,Nephrology
+Admitting Department,Neurology
+Admitting Department,Oncology
+Admitting Department,Orthopedics
+Admitting Department,Pediatrics
+Admitting Department,Psychiatry
+Admitting Department,Pulmonology
+Admitting Department,Radiology
+Admitting Department,Urology
+Doctor Name,Dr. Ethan Martin
+Doctor Name,Dr. Isabella Garcia
+Doctor Name,Dr. John Smith
+Doctor Name,Dr. Neha Kapoor
+Doctor Name,Dr. Sophia Wilson
+Doctor Name,Dr. Ananya Rao
+Doctor Name,Dr. Olivia Johnson
+Doctor Name,Dr. Priya Sharma
+Doctor Name,Dr. William White
+Doctor Name,Dr. Karthik Reddy
+Doctor Name,Dr. Ava Thomas
+Doctor Name,Dr. Emily Davis
+Doctor Name,Dr. Rahul Menon
+Doctor Name,Dr. Sneha Iyer
+Doctor Name,Dr. Arjun Mehta
+Doctor Name,Dr. Daniel Taylor
+Doctor Name,Dr. Rohan Nair
+Doctor Name,Dr. Michael Brown
+Ordering Doctor,Dr. Michael Brown
+Ordering Doctor,Dr. Karthik Reddy
+Ordering Doctor,Dr. Olivia Johnson
+Ordering Doctor,Dr. William White
+Ordering Doctor,Dr. Daniel Taylor
+Ordering Doctor,Dr. Sneha Iyer
+Ordering Doctor,Dr. Arjun Mehta
+Ordering Doctor,Dr. Emily Davis
+Ordering Doctor,Dr. Ava Thomas
+Ordering Doctor,Dr. Rahul Menon
+Ordering Doctor,Dr. Rohan Nair
+Ordering Doctor,Dr. Ethan Martin
+Ordering Doctor,Dr. Neha Kapoor
+Ordering Doctor,Dr. Sophia Wilson
+Ordering Doctor,Dr. John Smith
+Ordering Doctor,Dr. Isabella Garcia
+Ordering Doctor,Dr. Priya Sharma
+Ordering Doctor,Dr. Ananya Rao
+Group,Outpatient
+Group,Therapy
+Group,General Services
+Group,Diagnostics
+Group,Pharmacy
+Group,Inpatient
+Group,Surgical
+Group,ICU
+Group,Medical
+Group,Emergency
+Header,Emergency
+Header,Operation Theatre
+Header,Lab Services
+Header,Consultation
+Header,Nursing
+Header,Blood Bank
+Header,Radiology
+Header,Physiotherapy
+Header,Pharmacy
+Header,Health Checkup
+Service,X-Ray
+Cities,Vadodara
+Cities,Mumbai
+Cities,Bhopal
+Cities,Ahmedabad
+Cities,Patna
+Cities,Surat
+Cities,Indore
+Cities,Hyderabad
+Cities,Kolkata
+Cities,Lucknow
+Cities,Bengaluru
+Cities,Nagpur
+Cities,Pune
+Cities,Ghaziabad
+Cities,Jaipur
+Cities,Chennai
+Cities,Delhi
+Cities,Kanpur
+Cities,coimbatore
+Cities,erode
