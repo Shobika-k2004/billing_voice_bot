@@ -17,3 +17,4 @@ webrtcvad==2.0.10
 argostranslate==1.9.1
 sentence-transformers==2.2.2
 chromadb==0.4.18
+streamlit==1.28.1
